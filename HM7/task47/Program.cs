@@ -9,18 +9,23 @@ int m = 3;
 int n = 4;
 Random rnd = new Random();
 double[,] array = new double[m, n];
-for (int i = 0; i < m; i++)
+RandomArray(array);
+
+void RandomArray(double[,] array)
 {
-    for (int j = 0; j < n; j++)
+    for (int i = 0; i < m; i++)
     {
-        array[i, j] = rnd.NextDouble() * 20 - 10;
+        for (int j = 0; j < n; j++)
+        {
+            array[i, j] = rnd.NextDouble() * 20 - 10;
+        }
     }
 }
-for (int i = 0; i < m; i++)
-{
-    for (int j = 0; j < n; j++)
+    for (int i = 0; i < m; i++)
     {
-        Console.Write("\t" + Math.Round(array[i, j], 1) + " ");
+        for (int j = 0; j < n; j++)
+        {
+            Console.Write("\t" + Math.Round(array[i, j], 1) + " ");
+        }
+         Console.WriteLine();
     }
-    Console.WriteLine();
-}

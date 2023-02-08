@@ -15,25 +15,25 @@ int [,] numbers = new int [5,5];
 FillArrayRandom(numbers);
 
     if (n > numbers.GetLength(0) && m > numbers.GetLength(1))
-        {
-            Console.WriteLine("Такого элемента нет в массиве");
-        }
+    {
+        Console.WriteLine("Такого элемента нет в массиве");
+    }
     else
-        {
-            Console.WriteLine($" Элемент массива [{n},{m}] = {numbers[n-1,m-1]}");
-        }
+    {
+        Console.WriteLine($" Элемент массива [{n},{m}] = {numbers[n-1,m-1]}");
+    }
 
 PrintArray(numbers);
 
 void FillArrayRandom(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
-        {        
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-                array [i,j] = new Random().Next(1, 100);
-            }   
-        }
+    {        
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array [i,j] = new Random().Next(1, 100);
+        }   
+    }
 }
 
 void PrintArray(int[,] array)
